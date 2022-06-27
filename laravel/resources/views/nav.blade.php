@@ -1,19 +1,19 @@
-<nav class="navbar navbar-expand navbar-dark blue-gradient">
+<nav class="navbar navbar-expand navbar-light dusty-grass-gradient">
 
-  <a class="navbar-brand" href="/"><i class="far fa-sticky-note mr-1"></i>memo</a>
+  <a class="navbar-brand" href="/"><i class="fa-solid fa-fish mr-1"></i>BASSER<i class="fa-solid fa-fish ml-1"></i></a>
 
   <ul class="navbar-nav ml-auto">
 
     <li class="nav-item">
-      <a class="nav-link" href="">ユーザー登録</a>
+      <a class="nav-link" href=""><i class="fas fa-user"></i>登録</a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href="">ログイン</a>
+      <a class="nav-link" href=""><i class="fas fa-sign-in-alt"></i>ログイン</a>
     </li>
 
     <li class="nav-item">
-      <a class="nav-link" href=""><i class="fas fa-pen mr-1"></i>投稿する</a>
+      <a class="nav-link" href=""><i class="fas fa-pen mr-1"></i>投稿</a>
     </li>
 
     <!-- Dropdown -->
