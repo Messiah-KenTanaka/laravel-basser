@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-light dusty-grass-gradient">
 
-  <a class="navbar-brand" href="/"><i class="fa-solid fa-fish mr-1"></i>BASSER<i class="fa-solid fa-fish ml-1"></i></a>
+  <a class="navbar-brand" href="/"><i class="fa-solid fa-fish mr-1"></i><b>BASSER</b><i class="fa-solid fa-fish ml-1"></i></a>
 
   <ul class="navbar-nav ml-auto">
 
