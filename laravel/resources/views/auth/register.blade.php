@@ -12,7 +12,7 @@
             <h2 class="h3 card-title text-center mt-2">バサー登録</h2>
 
             <div class="card-text">
-              <form action="POST" action="{{ route('register') }}">
+              <form method="POST" action="{{ route('register') }}">
                 @csrf
                 <div class="md-form">
                   <label for="name">ユーザー名</label>
@@ -25,11 +25,11 @@
                 </div>
                 <div class="md-form">
                   <label for="password">パスワード</label>
-                  <input class="from-control" type="text" id="password" name="password" required>
+                  <input class="from-control" type="password" id="password" name="password" required>
                 </div>
                 <div class="md-form">
-                  <label for="password-confirmation">パスワード(確認)</label>
-                  <input class="from-control" type="password" id="confirmation" name="confirmation" required>
+                  <label for="password_confirmation">パスワード(確認)</label>
+                  <input class="from-control" type="password" id="password_confirmation" name="password_confirmation" required>
                 </div>
                 <button class="btn btn-block dusty-grass-gradient mt-2 mb-2" type="submit">バサー登録</button>
               </form>
