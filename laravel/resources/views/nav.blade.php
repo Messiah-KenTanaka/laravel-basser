@@ -5,7 +5,7 @@
   <ul class="navbar-nav ml-auto">
 
     <li class="nav-item">
-      <a class="nav-link" href=""><i class="fas fa-user"></i>登録</a>
+      <a class="nav-link" href="http://localhost/register"><i class="fas fa-user"></i>登録</a>
     </li>
 
     <li class="nav-item">
