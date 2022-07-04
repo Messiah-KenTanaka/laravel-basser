@@ -11,13 +11,15 @@
           <div class="card-body text-center">
             <h2 class="h3 card-title text-center mt-2">バサー登録</h2>
 
+            @include('error_card_list')
+
             <div class="card-text">
               <form method="POST" action="{{ route('register') }}">
                 @csrf
                 <div class="md-form">
                   <label for="name">ユーザー名</label>
                   <input class="from-control" type="text" id="name" name="name" required value="{{ old('name') }}"><br>
-                  <small>英数字3~16文字(登録後の変更不可)</small>
+                  <small>2~16文字(登録後の変更不可)</small>
                 </div>
                 <div class="md-form">
                   <label for="email">メールアドレス<me-ruadoresu></me-ruadoresu></label>
