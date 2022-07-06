@@ -5,6 +5,12 @@
 @section('content')
   @include('nav')
   <div class="container">
+    @auth
+      <div class="mt-3">
+        ようこそ<i class="h5 font-weight-bold">{{ ' ' . $user->name . ' ' }}</i>さん
+        <i class="fa-solid fa-face-laugh-squint"></i>
+      </div>
+    @endauth
     @foreach($articles as $article)
       <div class="card mt-3">
         <div class="card-body d-flex flex-row">
@@ -19,9 +25,9 @@
           </div>
         </div>
         <div class="card-body pt-0 pb-2">
-          <h3 class="h4 card-title">
+          <div class="h6 card-title font-weight-bold">
             {{ $article->title }}
-          </h3>
+          </div>
           <div class="card-text">
             {!! nl2br(e( $article->body )) !!}
           </div>
