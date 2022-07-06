@@ -27,3 +27,4 @@ Route::get('/', 'ArticleController@index')->name('articles.index');
 * ルーティングの確認 $ docker-compose exec workspace php artisan route:list (laradockディレクトリ内)
 */
 Route::resource('/articles', 'ArticleController')->except(['index'])->middleware('auth');
+Route::resource('/articles', 'ArticleController')->only(['show']);

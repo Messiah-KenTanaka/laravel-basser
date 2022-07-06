@@ -49,7 +49,7 @@ class ArticleController extends Controller
     }
 
     /**
-    * 記事編集画面
+    * 記事再編集画面
     * /article/{article}/edit
     */
     public function edit(Article $article)
@@ -80,5 +80,17 @@ class ArticleController extends Controller
         $article->delete();
         
         return redirect()->route('articles.index');
+    }
+
+    /**
+     * 記事1件詳細表示
+     * /article/{article}
+     */
+    public function show(Article $article)
+    {
+        return view('articles.show', 
+        [
+            'article' => $article,
+        ]);
     }
 }
