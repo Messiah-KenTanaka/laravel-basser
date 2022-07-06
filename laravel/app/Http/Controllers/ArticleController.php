@@ -59,4 +59,15 @@ class ArticleController extends Controller
             'article' => $article,
         ]);
     }
+
+    /**
+     * 記事更新処理
+     * /article/{article}/update
+     */
+    public function update(ArticleRequest $request, Article $article)
+    {
+        $article->fill($request->all())->save();
+
+        return redirect()->route('articles.index');
+    }
 }
