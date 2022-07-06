@@ -70,4 +70,15 @@ class ArticleController extends Controller
 
         return redirect()->route('articles.index');
     }
+
+    /**
+     * 記事削除処理
+     * /article/{article}/destroy
+     */
+    public function destroy(Article $article)
+    {
+        $article->delete();
+        
+        return redirect()->route('articles.index');
+    }
 }
