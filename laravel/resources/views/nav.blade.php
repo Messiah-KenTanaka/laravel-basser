@@ -12,7 +12,7 @@
 
     @guest
     <li class="nav-item">
-      <a class="nav-link" href=""><i class="fas fa-sign-in-alt"></i>ログイン</a>
+      <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i>ログイン</a>
     </li>
     @endguest
 
