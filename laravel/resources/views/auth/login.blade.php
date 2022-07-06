@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'ログイン')
+@section('title', 'バサーログイン')
 
 @section('content')
   <div class="container">
