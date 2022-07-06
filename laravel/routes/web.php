@@ -21,7 +21,9 @@ Auth::routes();
 // 記事一覧画面(TOPページ)
 Route::get('/', 'ArticleController@index')->name('articles.index');
 
-// よく使われる機能のルーティング
-// store, index, create, destroy, update, show, edit
-// ルーティングの確認 $ docker-compose exec workspace php artisan route:list (laradockディレクトリ内)
+/**
+* よく使われる機能のルーティング
+* store, index, create, destroy, update, show, edit
+* ルーティングの確認 $ docker-compose exec workspace php artisan route:list (laradockディレクトリ内)
+*/
 Route::resource('/articles', 'ArticleController')->except(['index'])->middleware('auth');
