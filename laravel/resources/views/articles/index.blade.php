@@ -24,7 +24,7 @@
             </div>
           </div>
 
-        @if( Auth::id() === $article->user_id )
+      @if( Auth::id() === $article->user_id )
         <!-- dropdown -->
         <div class="ml-auto card-text">
           <div class="dropdown">
