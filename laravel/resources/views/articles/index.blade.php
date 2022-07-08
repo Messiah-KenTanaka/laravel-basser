@@ -7,7 +7,7 @@
   <div class="container">
     @auth
       <div class="mt-3">
-        <i class="fas fa-dragon"></i>
+        <i class="fa-solid fa-fish"></i>
         <i class="h5 font-weight-bold">{{ ' ' . $user->name . ' ' }}</i>ログイン中
       </div>
     @endauth

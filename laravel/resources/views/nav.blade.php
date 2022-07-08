@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand navbar-light dusty-grass-gradient main-nav">
 
-  <a class="navbar-brand" href="/"><i class="fa-solid fa-fish mr-1"></i><i class="h3 font-weight-bold nav-title">BASSER</i><i class="fa-solid fa-fish ml-1 fa-rotate-180"></i></a>
+  <a class="navbar-brand" href="/"><i class="h3 font-weight-bold nav-title">BASSER</i></a>
 
   <ul class="navbar-nav ml-auto">
 
@@ -15,6 +15,10 @@
       <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i>ログイン</a>
     </li>
     @endguest
+
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fas fa-crown"></i>順位</a>
+    </li>
 
     @auth
     <li class="nav-item">
@@ -37,6 +41,11 @@
         <div class="dropdown-divider"></div>
         <button form="logout-button" class="dropdown-item" type="submit">
           ログアウト
+        </button>
+        <div class="dropdown-divider"></div>
+        <button class="dropdown-item" type="button"
+                onclick="location.href=''">
+          使い方
         </button>
       </div>
     </li>
