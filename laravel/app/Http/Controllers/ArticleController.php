@@ -8,6 +8,10 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(Article::class, 'article');
+    }
     /**
     * バサー一覧画面
     * /
