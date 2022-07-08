@@ -4,6 +4,10 @@
 
   <ul class="navbar-nav ml-auto">
 
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fas fa-crown"></i>順位</a>
+    </li>
+
     @guest
     <li class="nav-item">
       <a class="nav-link" href="{{ route('register') }}"><i class="fas fa-user"></i>登録</a>
@@ -15,10 +19,6 @@
       <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i>ログイン</a>
     </li>
     @endguest
-
-    <li class="nav-item">
-      <a class="nav-link" href="#"><i class="fas fa-crown"></i>順位</a>
-    </li>
 
     @auth
     <li class="nav-item">

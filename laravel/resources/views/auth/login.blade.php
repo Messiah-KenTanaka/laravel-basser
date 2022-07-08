@@ -28,13 +28,17 @@
                 </div>
 
                 <input type="hidden" name="remember" id="remember" value="on">
-                
+
                 <button class="btn btn-block dusty-grass-gradient mt-2 mb-2" type="submit">ログイン</button>
 
               </form>
 
-              <div class="mt-0">
+              <div class="mt-2">
                 <a href="{{ route('register') }}" class="card-text">バサー登録はこちら</a>
+              </div>
+
+              <div class="mt-2">
+                <a href="{{ route('password.request') }}" class="card-text">パスワードを忘れた方</a>
               </div>
 
             </div>
