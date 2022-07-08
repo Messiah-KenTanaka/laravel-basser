@@ -27,11 +27,11 @@
       <!-- dropdown -->
 
       <!-- modal -->
-      <div id="modal-delete-{{ $article->id }}" class="modal fade" tabindex="-1" role="dialog">
+      <div id="modal-delete-{{ $article->id }}" class="modal fade main-modal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header dusty-grass-gradient">
-              <i class="font-weight-bold">BASSER</i>
+              <i class="font-weight-bold modal-title">BASSER</i>
               <button type="button" class="close" data-dismiss="modal" aria-label="閉じる">
                 <span aria-hidden="true">&times;</span>
               </button>
@@ -56,13 +56,13 @@
 
   </div>
   <div class="card-body pt-0">
-    <h3 class="h4 card-title">
+    <b class="h5 card-title">
       <a class="text-dark" href="{{ route('articles.show', ['article' => $article]) }}">
         {{ $article->title }}
       </a>
-    </h3>
+    </b>
     <div class="card-text">
-      {{ $article->body }}
+      {!! nl2br($article->body) !!}
     </div>
   </div>
 </div>

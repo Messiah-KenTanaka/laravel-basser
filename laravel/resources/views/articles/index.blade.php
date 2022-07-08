@@ -7,8 +7,8 @@
   <div class="container">
     @auth
       <div class="mt-3">
-        ようこそ<i class="h5 font-weight-bold">{{ ' ' . $user->name . ' ' }}</i>さん
-        <i class="fa-solid fa-face-laugh-squint"></i>
+        <i class="fas fa-dragon"></i>
+        <i class="h5 font-weight-bold">{{ ' ' . $user->name . ' ' }}</i>ログイン中
       </div>
     @endauth
     @foreach($articles as $article)

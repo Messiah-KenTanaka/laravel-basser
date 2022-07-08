@@ -18,6 +18,12 @@
 // ログイン機能
 Auth::routes();
 
+// scss読み込みルーティング
+Route::get('scss', function () {
+    return view('app');
+});
+
+
 // 記事一覧画面(TOPページ)
 Route::get('/', 'ArticleController@index')->name('articles.index');
 
