@@ -54,7 +54,7 @@ class ArticleController extends Controller
 
     /**
     * 記事再編集画面
-    * /article/{article}/edit
+    * /articles/{article}/edit
     */
     public function edit(Article $article)
     {
@@ -66,7 +66,7 @@ class ArticleController extends Controller
 
     /**
      * 記事更新処理
-     * /article/{article}/update
+     * /articles/{article}/update
      */
     public function update(ArticleRequest $request, Article $article)
     {
@@ -77,7 +77,7 @@ class ArticleController extends Controller
 
     /**
      * 記事削除処理
-     * /article/{article}/destroy
+     * /articles/{article}/destroy
      */
     public function destroy(Article $article)
     {
@@ -88,7 +88,7 @@ class ArticleController extends Controller
 
     /**
      * 記事1件詳細表示
-     * /article/{article}
+     * /articles/{article}
      */
     public function show(Article $article)
     {
@@ -96,5 +96,34 @@ class ArticleController extends Controller
         [
             'article' => $article,
         ]);
+    }
+
+    /**
+     * いいね機能
+     * /articles/{article}/like
+     */
+    public function like(Request $request, Article $article)
+    {
+        $article->likes()->detach($request->user()->id);
+        $article->likes()->attach($request->user()->id);
+
+        return [
+            'id' => $article->id,
+            'countLikes' => $article->count_likes,
+        ];
+    }
+
+    /**
+     * いいね解除機能
+     * /articles/{article}/unlike
+     */
+    public function unlike(REquest $request, Article $article)
+    {
+        $article->likes()->detach($request->user()->id);
+
+        return [
+            'id' => $article->id,
+            'countLikes' => $article->count_likes,
+        ];
     }
 }

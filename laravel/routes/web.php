@@ -32,5 +32,11 @@ Route::get('/', 'ArticleController@index')->name('articles.index');
 * store, index, create, destroy, update, show, edit
 * ルーティングの確認 $ docker-compose exec workspace php artisan route:list (laradockディレクトリ内)
 */
-Route::resource('/articles', 'ArticleController')->except(['index'])->middleware('auth');
+Route::resource('/articles', 'ArticleController')->except(['index, show'])->middleware('auth');
 Route::resource('/articles', 'ArticleController')->only(['show']);
+
+// いいね機能のルーティング
+Route::prefix('articles')->name('articles.')->group(function () {
+    Route::put('/{article}/like', 'ArticleController@like')->name('like')->middleware('auth');
+    Route::delete('/{article}/like', 'ArticleController@unlike')->name('unlike')->middleware('auth');
+});
