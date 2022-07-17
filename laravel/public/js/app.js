@@ -1937,7 +1937,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   data: function data() {
     return {
       isLikedBy: this.initialIsLikedBy,
-      countLikes: this.initialCountLikes
+      countLikes: this.initialCountLikes,
+      gotToLike: false
     };
   },
   methods: {
@@ -1965,8 +1966,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 response = _context.sent;
                 _this.isLikedBy = true;
                 _this.countLikes = response.data.countLikes;
+                _this.gotToLike = true;
 
-              case 5:
+              case 6:
               case "end":
                 return _context.stop();
             }
@@ -1990,8 +1992,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 response = _context2.sent;
                 _this2.isLikedBy = false;
                 _this2.countLikes = response.data.countLikes;
+                _this2.gotToLike = false;
 
-              case 5:
+              case 6:
               case "end":
                 return _context2.stop();
             }
@@ -2027,7 +2030,8 @@ var render = function render() {
   }, [_c("i", {
     staticClass: "fas fa-heart mr-1",
     "class": {
-      "red-text": this.isLikedBy
+      "red-text": this.isLikedBy,
+      "animated heartBeat fast": this.gotToLike
     },
     on: {
       click: _vm.clickLike
