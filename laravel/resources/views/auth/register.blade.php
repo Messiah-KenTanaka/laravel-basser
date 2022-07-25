@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'バサー登録')
+@section('title', 'BASSER登録')
 
 @section('content')
   <div class="container">
@@ -9,7 +9,7 @@
         <h1 class="text-center"><a class="text-dark" href="/">BASSER</a></h1>
         <div class="card mt-3">
           <div class="card-body text-center">
-            <h2 class="h3 card-title text-center mt-2">バサー登録</h2>
+            <h2 class="h3 card-title text-center mt-2">BASSER登録</h2>
 
             @include('error_card_list')
 
@@ -33,7 +33,7 @@
                   <label for="password_confirmation">パスワード(確認)</label>
                   <input class="from-control" type="password" id="password_confirmation" name="password_confirmation" required>
                 </div>
-                <button class="btn btn-block dusty-grass-gradient mt-2 mb-2" type="submit">バサー登録</button>
+                <button class="btn btn-block dusty-grass-gradient mt-2 mb-2" type="submit">BASSER登録</button>
               </form>
               <div class="mt-0">
                 <a href="{{ route('login') }}" class="card-text">ログインはこちら</a>

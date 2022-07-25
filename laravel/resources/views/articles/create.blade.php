@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'バサー記事投稿')
+@section('title', 'BASSER記事投稿')
 
 @include('nav')
 

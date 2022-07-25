@@ -1,6 +1,6 @@
 @extends('app')
 
-@section('title', 'バサーログイン')
+@section('title', 'BASSERログイン')
 
 @section('content')
   <div class="container">
@@ -34,7 +34,7 @@
               </form>
 
               <div class="mt-2">
-                <a href="{{ route('register') }}" class="card-text">バサー登録はこちら</a>
+                <a href="{{ route('register') }}" class="card-text">BASSER登録はこちら</a>
               </div>
 
               <div class="mt-2">

@@ -14,7 +14,7 @@ class ArticleController extends Controller
         $this->authorizeResource(Article::class, 'article');
     }
     /**
-    * バサー一覧画面
+    * BASSER一覧画面
     * /
     */
     public function index()
