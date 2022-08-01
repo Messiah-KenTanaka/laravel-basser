@@ -2077,14 +2077,20 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: {
+    initialIsFollowedBy: {
+      type: Boolean,
+      "default": false
+    }
+  },
   data: function data() {
     return {
-      isFollowedBy: false
+      isFollowedBy: this.initialIsFollowedBy
     };
   },
   computed: {
     buttonColor: function buttonColor() {
-      return this.isFollowedBy ? 'bg-primary text-white' : 'bg-white';
+      return this.isFollowedBy ? 'dusty-grass-gradient text-dark' : 'bg-white';
     },
     buttonIcon: function buttonIcon() {
       return this.isFollowedBy ? 'fas fa-user-check' : 'fas fa-user-plus';
@@ -2202,7 +2208,7 @@ var render = function render() {
       _c = _vm._self._c;
 
   return _c("div", [_c("button", {
-    staticClass: "btn-sm shadow-none border border-primary p-2",
+    staticClass: "btn-sm shadow-none border border-light p-2",
     "class": _vm.buttonColor
   }, [_c("i", {
     staticClass: "mr-1",
