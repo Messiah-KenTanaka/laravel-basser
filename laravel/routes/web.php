@@ -47,6 +47,8 @@ Route::get('/tags/{name}', 'TagController@show')->name('tags.show');
 // ユーザーページ表示処理のルーティング
 Route::prefix('users')->name('users.')->group(function () {
     Route::get('/{name}', 'UserController@show')->name('show');
+    // いいねタブが押された時のルーティング
+    Route::get('/{name}/likes', 'UserController@likes')->name('likes');
     // フォロー機能のルーティング
     Route::middleware('auth')->group(function () {
         Route::put('/{name}/follow', 'UserController@follow')->name('follow');
