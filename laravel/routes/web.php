@@ -23,6 +23,10 @@ Route::get('scss', function () {
     return view('app');
 });
 
+// Googleログインボタン押下後のルーティング
+Route::prefix('login')->name('login.')->group(function () {
+    Route::get('/{provider}', 'Auth\LoginController@redirectToProvider')->name('{provider}');
+});
 
 // 記事一覧画面(TOPページ)
 Route::get('/', 'ArticleController@index')->name('articles.index');
