@@ -9,7 +9,7 @@
         <h1 class="text-center"><a class="text-dark" href="/">BASSER</a></h1>
         <div class="card mt-3">
           <div class="card-body text-center">
-            <h2 class="h3 card-title text-center mt-2">BASSER登録</h2>
+            <h2 class="h3 card-title text-center mt-2">ユーザー登録</h2>
 
             @include('error_card_list')
             <div class="card-text">
@@ -25,7 +25,7 @@
                   <label for="email">メールアドレス</label>
                   <input class="form-control" type="text" id="email" name="email" value="{{ $email }}" disabled>
                 </div>
-                <button class="btn btn-block dusty-grass-gradient mt-2 mb-2" type="submit">BASSER登録</button>
+                <button class="btn btn-block dusty-grass-gradient mt-2 mb-2" type="submit">ユーザー登録</button>
               </form>
             </div>
           </div>
