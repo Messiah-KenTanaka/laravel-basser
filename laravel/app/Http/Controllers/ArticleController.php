@@ -22,7 +22,8 @@ class ArticleController extends Controller
         // ログインユーザー取得
         $user = auth()->user();
         // 記事一覧取得
-        $articles = Article::all()->sortByDesc('created_at');
+        $articles = Article::all()->sortByDesc('created_at')
+            ->load(['user', 'likes', 'tags']);
 
         return view('articles.index',
             [
